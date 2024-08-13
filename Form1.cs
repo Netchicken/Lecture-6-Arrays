@@ -7,13 +7,14 @@ namespace Lecture_6_Arrays
         public Form1()
         {
             InitializeComponent();
-            ReferenceString();
-            Value();
+            StringReference();
+            intValue();
+            ArrayReference();
 
         }
 
 
-        private void ReferenceString()
+        private void StringReference()
         {
             //Initially, str1 and str2 both reference the same string "Hello".
             string str1 = "Hello";
@@ -30,6 +31,12 @@ namespace Lecture_6_Arrays
             Debug.WriteLine("str2 " + str2); // Output: World
 
 
+
+
+        }
+
+        private static void ArrayReference()
+        {
             int[] array1 = { 1, 2, 3 };
             int[] array2 = array1; // array2 references the same array as array1
 
@@ -40,11 +47,9 @@ namespace Lecture_6_Arrays
 
             Debug.WriteLine("array1 " + array1[0]); // Output: 10
             Debug.WriteLine("array2 " + array2[0]); // Output: 10
-
-
         }
 
-        private void Value()
+        private void intValue()
         {
             int a = 10;
             int b = a; // b is now a just a copy of a. Its has its own memoery place and just copied the value of a over

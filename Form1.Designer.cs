@@ -32,6 +32,8 @@
             lbxArrays = new ListBox();
             btnWriteArrayToFile = new Button();
             btnReadDataIn = new Button();
+            btn2DArray = new Button();
+            btnLists = new Button();
             SuspendLayout();
             // 
             // btnSimpleArray
@@ -66,19 +68,41 @@
             // 
             // btnReadDataIn
             // 
-            btnReadDataIn.Location = new Point(303, 187);
+            btnReadDataIn.Location = new Point(296, 186);
             btnReadDataIn.Name = "btnReadDataIn";
-            btnReadDataIn.Size = new Size(75, 23);
+            btnReadDataIn.Size = new Size(97, 33);
             btnReadDataIn.TabIndex = 3;
             btnReadDataIn.Text = "Read Data In";
             btnReadDataIn.UseVisualStyleBackColor = true;
             btnReadDataIn.Click += btnReadDataIn_Click;
+            // 
+            // btn2DArray
+            // 
+            btn2DArray.Location = new Point(296, 237);
+            btn2DArray.Name = "btn2DArray";
+            btn2DArray.Size = new Size(97, 23);
+            btn2DArray.TabIndex = 4;
+            btn2DArray.Text = "2D Arrays";
+            btn2DArray.UseVisualStyleBackColor = true;
+            btn2DArray.Click += btn2DArray_Click;
+            // 
+            // btnLists
+            // 
+            btnLists.Location = new Point(296, 276);
+            btnLists.Name = "btnLists";
+            btnLists.Size = new Size(97, 42);
+            btnLists.TabIndex = 5;
+            btnLists.Text = "Working with Lists";
+            btnLists.UseVisualStyleBackColor = true;
+            btnLists.Click += btnLists_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnLists);
+            Controls.Add(btn2DArray);
             Controls.Add(btnReadDataIn);
             Controls.Add(btnWriteArrayToFile);
             Controls.Add(lbxArrays);
@@ -94,5 +118,7 @@
         private ListBox lbxArrays;
         private Button btnWriteArrayToFile;
         private Button btnReadDataIn;
+        private Button btn2DArray;
+        private Button btnLists;
     }
 }

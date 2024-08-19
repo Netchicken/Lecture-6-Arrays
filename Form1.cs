@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Drawing.Drawing2D;
 using System.Reflection.Metadata;
 
 namespace Lecture_6_Arrays
@@ -173,6 +174,67 @@ namespace Lecture_6_Arrays
             foreach (string line in lines)
             {
                 lbxArrays.Items.Add("add line " + line);
+            }
+        }
+
+        private void btn2DArray_Click(object sender, EventArgs e)
+        {
+            // Initialize a 2D array with specific values
+            int[,] data = {
+                    { 1, 2, 3, 4 },
+                    { 5, 6, 7, 8 },
+                    { 9,10,11,12 }
+                            };
+
+            //use a nested for loop to get each element out
+
+            for (int i = 0; i < data.GetLength(0); i++) // Iterate through rows
+            {
+                for (int j = 0; j < data.GetLength(1); j++) // Iterate through columns
+                {
+                    //load the data at that point data[row,column]
+                    lbxArrays.Items.Add(data[i, j]);
+                }
+            }
+        }
+
+        private void btnLists_Click(object sender, EventArgs e)
+        {
+            // Create and initialize a list
+            List<int> data = new List<int> { 60, 76, 5, 10, 15, 20, 25 };
+
+            // Add elements
+            data.Add(30);
+            data.AddRange(new int[] { 35, 40 });
+
+            // Access and modify elements
+            lbxArrays.Items.Add("First element: " + data[0]);
+            data[1] = 12;
+
+            // Remove elements
+            data.Remove(15);
+            data.RemoveAt(2);
+
+            // Check for elements
+            bool containsTwenty = data.Contains(20);
+            lbxArrays.Items.Add("Contains 20: " + containsTwenty);
+
+            // Iterate through the list
+            lbxArrays.Items.Add("List elements:");
+            foreach (int number in data)
+            {
+                lbxArrays.Items.Add(number);
+            }
+
+            // Sort and reverse the list
+            data.Sort();
+            data.Reverse();
+
+            // Display the sorted and reversed list
+            lbxArrays.Items.Add("Sorted and reversed list:");
+            foreach (int number in data)
+            {
+                lbxArrays.Items.Add(number);
             }
         }
     }

@@ -28,12 +28,71 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            btnSimpleArray = new Button();
+            lbxArrays = new ListBox();
+            btnWriteArrayToFile = new Button();
+            btnReadDataIn = new Button();
+            SuspendLayout();
+            // 
+            // btnSimpleArray
+            // 
+            btnSimpleArray.Location = new Point(300, 75);
+            btnSimpleArray.Name = "btnSimpleArray";
+            btnSimpleArray.Size = new Size(93, 30);
+            btnSimpleArray.TabIndex = 0;
+            btnSimpleArray.Text = "SimpleArray";
+            btnSimpleArray.UseVisualStyleBackColor = true;
+            btnSimpleArray.Click += btnSimpleArray_Click;
+            // 
+            // lbxArrays
+            // 
+            lbxArrays.FormattingEnabled = true;
+            lbxArrays.ItemHeight = 15;
+            lbxArrays.Location = new Point(452, 54);
+            lbxArrays.Name = "lbxArrays";
+            lbxArrays.Size = new Size(285, 244);
+            lbxArrays.TabIndex = 1;
+            lbxArrays.SelectedIndexChanged += lbxArrays_SelectedIndexChanged;
+            // 
+            // btnWriteArrayToFile
+            // 
+            btnWriteArrayToFile.Location = new Point(299, 128);
+            btnWriteArrayToFile.Name = "btnWriteArrayToFile";
+            btnWriteArrayToFile.Size = new Size(94, 43);
+            btnWriteArrayToFile.TabIndex = 2;
+            btnWriteArrayToFile.Text = "Write to File";
+            btnWriteArrayToFile.UseVisualStyleBackColor = true;
+            btnWriteArrayToFile.Click += btnWriteArrayToFile_Click;
+            // 
+            // btnReadDataIn
+            // 
+            btnReadDataIn.Location = new Point(303, 187);
+            btnReadDataIn.Name = "btnReadDataIn";
+            btnReadDataIn.Size = new Size(75, 23);
+            btnReadDataIn.TabIndex = 3;
+            btnReadDataIn.Text = "Read Data In";
+            btnReadDataIn.UseVisualStyleBackColor = true;
+            btnReadDataIn.Click += btnReadDataIn_Click;
+            // 
+            // Form1
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Controls.Add(btnReadDataIn);
+            Controls.Add(btnWriteArrayToFile);
+            Controls.Add(lbxArrays);
+            Controls.Add(btnSimpleArray);
+            Name = "Form1";
+            Text = "Form1";
+            ResumeLayout(false);
         }
 
         #endregion
+
+        private Button btnSimpleArray;
+        private ListBox lbxArrays;
+        private Button btnWriteArrayToFile;
+        private Button btnReadDataIn;
     }
 }

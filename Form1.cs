@@ -212,8 +212,8 @@ namespace Lecture_6_Arrays
             data[1] = 12;
 
             // Remove elements
-            data.Remove(15);
-            data.RemoveAt(2);
+            data.Remove(15); //remove a specific item
+            data.RemoveAt(2);//remove at a specific index
 
             // Check for elements
             bool containsTwenty = data.Contains(20);
@@ -236,6 +236,30 @@ namespace Lecture_6_Arrays
             {
                 lbxArrays.Items.Add(number);
             }
+        }
+
+        private void btnListFind_Click(object sender, EventArgs e)
+        {
+            List<int> numbers = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+
+            // Find the first even number
+            int firstEven = numbers.Find(n => n % 2 == 0);
+            lbxArrays.Items.Add("First even number: " + firstEven);
+
+            // Find all even numbers
+            List<int> evenNumbers = numbers.FindAll(n => n % 2 == 0);
+            lbxArrays.Items.Add("Even numbers: " + string.Join(", ", evenNumbers));
+        }
+
+        private void btnSortingAdvanced_Click(object sender, EventArgs e)
+        {
+            List<string> names = new List<string>
+            { "John", "Janet", "Alice", "Bob", "George","Be" };
+
+            // Sort by length of the name
+            names.Sort((x, y) => x.Length.CompareTo(y.Length));
+            lbxArrays.Items.Add("Sorted by length: ");
+            lbxArrays.Items.AddRange(names.Cast<object>().ToArray());
         }
     }
 

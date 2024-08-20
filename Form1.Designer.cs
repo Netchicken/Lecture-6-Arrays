@@ -34,6 +34,8 @@
             btnReadDataIn = new Button();
             btn2DArray = new Button();
             btnLists = new Button();
+            btnListFind = new Button();
+            btnSortingAdvanced = new Button();
             SuspendLayout();
             // 
             // btnSimpleArray
@@ -52,7 +54,7 @@
             lbxArrays.ItemHeight = 15;
             lbxArrays.Location = new Point(452, 54);
             lbxArrays.Name = "lbxArrays";
-            lbxArrays.Size = new Size(285, 244);
+            lbxArrays.Size = new Size(347, 394);
             lbxArrays.TabIndex = 1;
             lbxArrays.SelectedIndexChanged += lbxArrays_SelectedIndexChanged;
             // 
@@ -96,11 +98,33 @@
             btnLists.UseVisualStyleBackColor = true;
             btnLists.Click += btnLists_Click;
             // 
+            // btnListFind
+            // 
+            btnListFind.Location = new Point(296, 334);
+            btnListFind.Name = "btnListFind";
+            btnListFind.Size = new Size(97, 42);
+            btnListFind.TabIndex = 6;
+            btnListFind.Text = "Find in Lists";
+            btnListFind.UseVisualStyleBackColor = true;
+            btnListFind.Click += btnListFind_Click;
+            // 
+            // btnSortingAdvanced
+            // 
+            btnSortingAdvanced.Location = new Point(296, 382);
+            btnSortingAdvanced.Name = "btnSortingAdvanced";
+            btnSortingAdvanced.Size = new Size(97, 42);
+            btnSortingAdvanced.TabIndex = 7;
+            btnSortingAdvanced.Text = "Advanced sorting";
+            btnSortingAdvanced.UseVisualStyleBackColor = true;
+            btnSortingAdvanced.Click += btnSortingAdvanced_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnSortingAdvanced);
+            Controls.Add(btnListFind);
             Controls.Add(btnLists);
             Controls.Add(btn2DArray);
             Controls.Add(btnReadDataIn);
@@ -120,5 +144,7 @@
         private Button btnReadDataIn;
         private Button btn2DArray;
         private Button btnLists;
+        private Button btnListFind;
+        private Button btnSortingAdvanced;
     }
 }
